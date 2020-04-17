@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="snap_to_grid_type_prefs">
+        <item>Trazar constantemente</item>
+        <item>Trazar al inicio y final</item>
+    </string-array>
+</resources>

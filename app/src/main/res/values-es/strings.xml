@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Word Search Classic</string>
+    <string name="new_game_loading_text">Generando los datos del juego…</string>
+    <string name="summary_about">Word search es un juego de rompecabezas donde el jugador trata de encontrar palabras en una cuadrícula de letras ya sea en dirección horizontal, vertical o diagonal.</string>
+    <string name="finished">¡Finalizado!</string>
+
+    <!-- prefs -->
+    <string name="pref_showGridLine">showGridLine</string>
+    <string name="pref_snapToGrid">snapToGrid</string>
+    <string name="pref_enableSound">enableSound</string>
+    <string name="pref_deleteAfterFinish">deleteAfterFinish</string>
+    <string name="pref_enableFullscreen">enableFullscreen</string>
+    <string name="pref_autoScaleGrid">autoScaleGrid</string>
+    <string name="snap_to_grid_def_val">ALWAYS_SNAP</string>
+    <string name="show_grid_line">Mostrar líneas de la cuadrícula</string>
+    <string name="snap_to_grid">Comportamiento de la cuadrícula</string>
+    <string name="about">Acerca de</string>
+    <string name="saved_game">Datos del Juego Guardados</string>
+    <string name="enable_sound">Activar sonido</string>
+    <string name="about_credit">Desarrollador: Abdul Aris R.</string>
+    <string name="delete_finish">Eliminar al finalizar</string>
+    <string name="enable_fullscreen">Pantalla completa</string>
+    <string name="auto_scale_grid">Autoescalar cuadrícula</string>
+    <string name="finish_text">Has finalizado una cuadrícula de :gridSize con :uwCount palabras en :duration</string>
+    <string name="version">Versión</string>
+    <string name="version_num">1.0.1</string>
+    <string name="settings">Configuración</string>
+    <string name="congratulations">¡Felicidades!</string>
+    <string name="main_menu">Menú Principal</string>
+    <string name="new_game">NUEVA PARTIDA</string>
+    <string name="auto_scale_grid_summary">Escalar cuadrícula automaticámente basado en el ancho de la pantalla</string>
+    <string name="pref_reverseMatching">reverseMatching</string>
+    <string name="reverse_matching">Palabras al revés</string>
+    <string name="pref_grayscale">grayscale</string>
+    <string name="grayscale">Escala de grises</string>
+    <string name="game_data_desc">:gridSize Cuadrícula, :wordCount Palabras</string>
+    <string name="game_history">Historial de Juego</string>
+    <string name="grid_size">Tamaño</string>
+    <string name="clear_all">Limpiar Todo</string>
+    <string name="no_game_data">Sin datos de juegos guardados</string>
+    <string name="play_me">Continuar juego</string>
+    <string name="delete_finish_summary">Eliminar datos de juego al finalizar</string>
+    <string name="reverse_matching_summary">Permitir selección de palabras al revés</string>
+    <string name="grayscale_summary">Deshabilitar colores</string>
+
+</resources>

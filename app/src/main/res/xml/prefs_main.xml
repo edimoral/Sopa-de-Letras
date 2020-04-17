@@ -30,25 +30,25 @@
             android:defaultValue="true"/>
 
         <CheckBoxPreference
-            android:title="@string/delete_finish"
-            android:summary="Delete game data when it finished"
+            android:defaultValue="true"
             android:icon="@drawable/ic_delete_after_finish"
             android:key="@string/pref_deleteAfterFinish"
-            android:defaultValue="true"/>
+            android:summary="@string/delete_finish_summary"
+            android:title="@string/delete_finish" />
 
         <CheckBoxPreference
-            android:title="@string/grayscale"
-            android:summary="Disable colors"
+            android:defaultValue="false"
             android:icon="@drawable/ic_grayscale"
             android:key="@string/pref_grayscale"
-            android:defaultValue="false"/>
+            android:summary="@string/grayscale_summary"
+            android:title="@string/grayscale" />
 
         <CheckBoxPreference
-            android:title="@string/reverse_matching"
-            android:summary="Allow reverse word selection"
+            android:defaultValue="true"
             android:icon="@drawable/ic_reverse_match"
             android:key="@string/pref_reverseMatching"
-            android:defaultValue="true"/>
+            android:summary="@string/reverse_matching_summary"
+            android:title="@string/reverse_matching" />
 
         <CheckBoxPreference
             android:title="@string/show_grid_line"

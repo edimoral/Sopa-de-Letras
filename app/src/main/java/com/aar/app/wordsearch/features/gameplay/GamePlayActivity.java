@@ -110,7 +110,6 @@ public class GamePlayActivity extends FullscreenActivity {
         mViewModel.getOnTimer().observe(this, this::showDuration);
         mViewModel.getOnGameState().observe(this, this::onGameStateChanged);
         mViewModel.getOnAnswerResult().observe(this, this::onAnswerResult);
-
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             if (extras.containsKey(EXTRA_GAME_ROUND_ID)) {
@@ -119,6 +118,7 @@ public class GamePlayActivity extends FullscreenActivity {
             } else {
                 int rowCount = extras.getInt(EXTRA_ROW_COUNT);
                 int colCount = extras.getInt(EXTRA_COL_COUNT);
+                mViewModel.setContext(this);
                 mViewModel.generateNewGameRound(rowCount, colCount);
             }
         }

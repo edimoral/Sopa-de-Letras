@@ -4,12 +4,14 @@ import android.annotation.SuppressLint;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
+import android.content.Context;
 
+import com.aar.app.wordsearch.R;
 import com.aar.app.wordsearch.commons.SingleLiveEvent;
 import com.aar.app.wordsearch.commons.Timer;
 import com.aar.app.wordsearch.data.GameDataSource;
-import com.aar.app.wordsearch.data.entity.GameDataMapper;
 import com.aar.app.wordsearch.data.WordDataSource;
+import com.aar.app.wordsearch.data.entity.GameDataMapper;
 import com.aar.app.wordsearch.model.GameData;
 import com.aar.app.wordsearch.model.UsedWord;
 import com.aar.app.wordsearch.model.Word;
@@ -68,6 +70,7 @@ public class GamePlayViewModel extends ViewModel {
         }
     }
 
+    private Context mContext;
     private GameDataSource mGameDataSource;
     private WordDataSource mWordDataSource;
     private GameDataCreator mGameDataCreator;
@@ -134,11 +137,11 @@ public class GamePlayViewModel extends ViewModel {
     @SuppressLint("CheckResult")
     public void generateNewGameRound(int rowCount, int colCount) {
         if (!(mCurrentState instanceof Generating)) {
-            setGameState(new Generating(rowCount, colCount, "Play me"));
+            setGameState(new Generating(rowCount, colCount, mContext.getResources().getString(R.string.play_me)));
 
             Observable.create((ObservableOnSubscribe<GameData>) emitter -> {
                 List<Word> wordList = mWordDataSource.getWords();
-                GameData gr = mGameDataCreator.newGameData(wordList, rowCount, colCount, "Play me");
+                GameData gr = mGameDataCreator.newGameData(wordList, rowCount, colCount, mContext.getResources().getString(R.string.play_me));
                 long gid = mGameDataSource.saveGameData(new GameDataMapper().revMap(gr));
                 gr.setId((int) gid);
                 emitter.onNext(gr);
@@ -182,5 +185,9 @@ public class GamePlayViewModel extends ViewModel {
     private void setGameState(GameState state) {
         mCurrentState = state;
         mOnGameState.setValue(mCurrentState);
+    }
+
+    public void setContext(Context context){
+        mContext = context;
     }
 }
