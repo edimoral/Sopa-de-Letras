@@ -44,6 +44,7 @@ public class MainMenuActivity extends FullscreenActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("MainMenuActivity", "Start Testing");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
